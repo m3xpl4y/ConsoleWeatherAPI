@@ -23,14 +23,13 @@ namespace ConsoleWeatherAPI
             
             var stringResult = await response.Content.ReadAsStringAsync();
 
-
-
             var obj = JsonConvert.DeserializeObject<dynamic>(stringResult);
             var city = obj.name;
             var humidity = obj.main.humidity;
             var cloudly = obj.weather[0].description;
             var tmpDegreesF = Math.Round(((float)obj.main.temp));
             Console.WriteLine($"Derzeitige Temperatur in {city} ist {tmpDegreesF}°C und Feuchtigkeit ist {humidity} und {cloudly}");
+            Console.WriteLine("Beliebge Taste Drücken um zu beenden!");
             Console.ReadKey();
 
 
