@@ -13,6 +13,7 @@ namespace ConsoleWeatherAPI
         static async Task Main(string[] args)
         {
             string apiKey = "8e3ad4a03522edcad4c7c354ce9c44a8";
+            
             HttpClient client = new HttpClient();
             client.BaseAddress = new Uri("http://api.openweathermap.org");
 
